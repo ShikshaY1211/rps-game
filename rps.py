@@ -1,11 +1,12 @@
 
+
 # This game was built using GitHub Copilot, but notably the code
 # matches this website's version almost identically:
 #   https://realpython.com/python-rock-paper-scissors/
 
 import random
-
-user_action = input("Enter throw (rock, paper, scissors): ")
+while True:
+user_action = input("Enter throw (rock, paper, scissors): ").lower()
 ai_action = random.choice(["rock", "paper", "scissors"])
 
 print(f"\nYou chose {user_action}, AI chose {ai_action}.\n")
@@ -27,3 +28,10 @@ elif user_action == "scissors":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock smashes scissors! You lose.")
+   else:
+       print ("Invalid input! Please choose rock,paper,scissors.")
+
+   play_again = input("Do you want to play again? (yes/no):").lower()
+   if play_again != "yes":
+print("Thanks for playing! Goodbye.")
+break
